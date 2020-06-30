@@ -1,6 +1,5 @@
 ---
-- hosts: webservers
-  become: yes
+- become: yes
   gather_facts: yes
   remote_user: automate
 
