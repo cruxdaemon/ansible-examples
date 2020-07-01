@@ -1,0 +1,12 @@
+---
+- hosts: webservers
+  become: yes
+  gather_facts: yes
+  remote_user: automate
+
+  tasks:
+    - name: make sure nginx is running
+      service:
+        name: nginx
+        state: started
+

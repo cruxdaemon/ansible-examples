@@ -1,0 +1,12 @@
+---
+- hosts: webservers
+  become: yes
+  gather_facts: yes
+  remote_user: automate
+
+  tasks:
+    - name: stop nginx web server
+      service:
+        name: nginx
+        state: stopped
+
